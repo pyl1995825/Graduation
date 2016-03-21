@@ -6,5 +6,9 @@ public class Demo {
 		// TODO Auto-generated method stub
 		System.out.println("123");
 	}
+	
+	public static void getName() {
+		System.out.println("pengyulin");
+	}
 
 }
