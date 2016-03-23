@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding='UTF-8'?>
+<!DOCTYPE hibernate-mapping PUBLIC
+                            "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+                            "http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd" >
+
+<hibernate-mapping package="edu.nefu.gdms.daomain">
+	<class name="Teacher" table="teacher">
+		<id name="teid" column="teid">
+			<generator class="uuid"></generator>
+		</id>
+		<property name="number" column="number" type="java.lang.String"
+			not-null="true" />
+		<property name="name" column="name" type="java.lang.String"
+			not-null="true" />	
+		<property name="pwd" column="pwd" type="java.lang.String"
+			not-null="true" />
+		<property name="phone" column="phone" type="java.lang.String"
+			not-null="true" />
+		<property name="email" column="email" type="java.lang.String"
+			not-null="true" />
+		<property name="major" column="major" type="java.lang.String"
+			not-null="true" />
+		<property name="gid" column="gid" type="java.lang.String"
+			not-null="true" />
+		<property name="level" column="level" type="java.lang.String"
+			not-null="true" />
+		<set name="teacher" inverse="true" lazy="true">
+			<key column="teid"/>
+				<one-to-many class="student"/>
+		</set>
+	</class>
+</hibernate-mapping>
