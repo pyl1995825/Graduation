@@ -7,7 +7,7 @@ public class Paper {
 	private String sid;
 	private double score;
 	private String stid;
-
+	private String aaaa;
 	
 	
 	
